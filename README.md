@@ -7,7 +7,7 @@ Manage home directory with `git` directly
   - [Initialize](#initialize)
   - [Update (for those kept this repo as `upstream`)](#update-for-those-kept-this-repo-as-upstream)
   - [Uninstall](#uninstall)
-  - [Guideline](#guideline)
+  - [Guidelines](#guidelines)
 - [Repo Maintenance](#repo-maintenance)
   - [Adding files or directories](#adding-files-or-directories)
 - [LICENSE](#license)
@@ -31,33 +31,36 @@ __NOTE:__ DO NOT fork this repo for private syncing purpose
 
 1. Clone this repo as your home directory
     - `git clone --no-checkout https://github.com/jeffreystoke/dotfiles.git ${HOME}`
+1. Go to `${HOME}` and checkout files
     - Set sparse-checkout mode: `git sparse-checkout init`
     - (Optional) Update `.gitkeep` to keep expected directories and files only
     - Ckeckout expected files: `cat .gitkeep | git sparse-checkout set --stdin`
-2. Move files back to your `${HOME}` and resolve possible overrides according to `git status`
-3. Use private repo for secret config syncing
+1. Move files back to your `${HOME}` and resolve possible overrides according to `git status`
+1. Use private repo for secret config syncing
    - Rename `origin` to `upstream`: `git remote rename origin upstream`
    - Forbid unexpected push to `upstream`: `git config remote.upstream.pushurl 'STOP PUSHING TO PUBLIC UPSTREAM'`
-   - Add private repo as `origin`: `git remote add origin ${MY_PRIVATE_REPO_URL}`
-   - Update `.gitignore` files to include your private files
+   - Add your private repo as `origin`: `git remote add origin ${MY_PRIVATE_REPO_URL}`
 
 #### Option 2: Use this repo as template
 
 1. Create a new private repo using this repo as template
-2. Follow steps listed in [option 1](#option-1-keep-this-repo-as-upstream) and skip last step
+1. Follow steps listed in [option 1](#option-1-keep-this-repo-as-upstream) (change the repo url to yours) and skip the last step
 
 ### Update (for those kept this repo as `upstream`)
 
+1. Go to `${HOME}`
 1. Run `git stash` to save all overrides to `${HOME}`
-2. Update dotfiles by executing `git pull --rebase`
-3. Run `git stash pop` and resolve all conflicts
+1. Update dotfiles by executing `git pull upstream master --rebase`
+1. Run `git stash pop` and resolve all conflicts
+1. Commit your changes and push to `origin`
 
 ### Uninstall
 
+1. Backup your dotfiles
 1. Remove all files from this project by running `git sparse-checkout set ""`
 1. Remove `${HOME}/.git`
 
-### Guideline
+### Guidelines
 
 - [git](./docs/git.md) config management
 
