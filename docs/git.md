@@ -12,7 +12,7 @@ Git config management
     - [urls](../.gitconfigs/presets/urls) - Set remote url rewrite
   - [users](../.gitconfigs/users) - Git users
   - [workspaces](../.gitconfigs/workspaces) - Workspace specific settings
-  - [global.gitignore] - Global .gitignore
+  - [global.gitignore](../.gitconfigs/global.gitignore) - Global .gitignore for all repos
 
 ## Concepts
 
@@ -20,5 +20,5 @@ Git config management
   - see [.gitconfigs/users/joe.doyle.gitconfig](./../.gitconfigs/users/joe.doyle.gitconfig) for example
 - A `workspace` is just a gitconfig for one or more groups of repos with following requirements:
   - A repo group can only be defined using `includeIf`
-  - Each repo group should reference a `user` from [users](../.gitconfigs/users)
+  - Each repo group MUST reference a `user` from [users](../.gitconfigs/users)
   - Each repo group can set group specific config by add more `path = /path/to/some.gitconfig` lines to its `includeIf` section
