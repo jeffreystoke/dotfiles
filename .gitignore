@@ -1,0 +1,24 @@
+/*
+
+# git
+
+!/.gitconfigs
+!/.gitconfig
+!/.gitignore
+
+# kubernetes
+
+!/.kube
+
+# project files
+
+!/scripts
+!/.ecrc
+!/.editorconfig
+!/.pre-commit-config.yaml
+!/.renovaterc.json
+!/.yaml-lint.yml
+!/LICENSE.txt
+!/Makefile
+!/README.md
+!/sparse-checkout-files.txt

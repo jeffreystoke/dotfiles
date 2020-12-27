@@ -34,10 +34,11 @@ Keep your home directory infrastructure updated
 
 ## Maintenance
 
-### Add files or directories
+### Adding files or directories
 
 - Add new files and directories
 - Update `sparse-checkout-files.txt` to include new files
+- Update `.gitignore` to exclude new files
 
 ## LICENSE
 
