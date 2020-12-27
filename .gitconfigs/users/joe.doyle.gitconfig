@@ -4,4 +4,4 @@
     # signingkey = XXXXXXXXXXXXXXXX
 
 [core]
-    sshCommand = 'ssh -i ~/.ssh/joe.doyle'
+    sshCommand = ssh -i ~/.ssh/joe.doyle
