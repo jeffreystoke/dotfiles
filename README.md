@@ -15,7 +15,8 @@ Manage home directory with `git` directly
 1. Clone this repo as your home directory
     - `git clone --no-checkout https://github.com/jeffreystoke/dotfiles.git ${HOME}`
     - Set sparse-checkout mode: `git sparse-checkout init`
-    - Keep functional files only: `cat sparse-checkout-files.txt | git sparse-checkout set --stdin`
+    - (Optional) Update `.dotfiles` to keep expected directories and files only
+    - Ckeckout expected files: `cat .dotfiles | git sparse-checkout set --stdin`
 1. Move files back to your `${HOME}` and resolve possible overrides according to `git status`
 1. (Optional) Update remote url to your private repo so you can sync to remote with credentials
 
@@ -37,7 +38,7 @@ Keep your home directory infrastructure updated
 ### Adding files or directories
 
 - Add new files and directories
-- Update `sparse-checkout-files.txt` to include new files
+- Update `.dotfiles` to include new files
 - Update `.gitignore` to exclude new files
 
 ## LICENSE

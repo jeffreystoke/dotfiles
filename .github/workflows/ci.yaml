@@ -34,7 +34,7 @@ jobs:
       run: |
         ls -alh
 
-        cat sparse-checkout-files.txt | git sparse-checkout set --stdin
+        cat .dotfiles | git sparse-checkout set --stdin
 
         ls -alh
 

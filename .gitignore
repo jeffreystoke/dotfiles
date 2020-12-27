@@ -12,6 +12,8 @@
 
 # project files
 
+!/.dotfiles
+
 !/scripts
 !/.ecrc
 !/.editorconfig
@@ -21,4 +23,3 @@
 !/LICENSE.txt
 !/Makefile
 !/README.md
-!/sparse-checkout-files.txt
