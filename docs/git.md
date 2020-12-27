@@ -22,3 +22,21 @@ Git config management
   - A repo group can only be defined using `includeIf`
   - Each repo group MUST reference a `user` from [users](../.gitconfigs/users)
   - Each repo group can set group specific config by add more `path = /path/to/some.gitconfig` lines to its `includeIf` section
+
+## Repo placement
+
+As you may have realized, using `includeIf` in gitconfig can have extra requirements for the placement of your repos:
+
+- Repos with same `user` and behavior are grouped together and should share one parent directory so we can define one `includeIf` for them all
+- Repos with different `user` MUST not be grouped together
+
+Let's assume you have a directory `~/repos` for all your repos, with the requirements above, you should place your repos to `~/repos/<GROUP_NAME>/<REPO_NAME>`, and the file structure should look like this:
+
+```txt
+~/repos
+|-- alice-group
+|   `-- bob-repo
+`-- foo-group
+    |-- bar-repo
+    `-- foobar-repo
+```
