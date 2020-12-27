@@ -1,18 +1,18 @@
-# DO NOT add any config option other than `includeIf`, if you want to override something, add it
-# to ~/.gitconfigs/presets or in the `gitdir` and include them in `includeIf`
+# DO NOT add any config option other than `includeIf`, if you want to override something, add a new
+# some-new.gitconfig in ~/.gitconfigs/presets or in the `gitdir` and include them in `includeIf`
 
 # NOTE: the trailing slash is required for gitdir if you want include all repos in that dir
 
 # gitconfig for repos in ~/repos/sample dir
 # e.g. ~/repos/sample/my-repo-1 and ~/repos/sample/my-repo-2
 [includeIf "gitdir:~/repos/sample/"]
-	# set user
-	path = ~/.gitconfigs/users/sample.gitconfig
-	# disable default commit & tag signing
-	path = ~/.gitconfigs/presets/behavior/sign-disabled.gitconfig
+    # set user
+    path = ~/.gitconfigs/users/sample.gitconfig
+    # disable default commit & tag signing
+    path = ~/.gitconfigs/presets/behavior/sign-disabled.gitconfig
 
 [includeIf "gitdir:~/repos/foo/"]
-	# set user
-	path = ~/.gitconfigs/users/sample.gitconfig
-	# use ssh for github
-	path = ~/.gitconfigs/presets/urls/ssh-github.gitconfig
+    # set user
+    path = ~/.gitconfigs/users/sample.gitconfig
+    # use ssh for github
+    path = ~/.gitconfigs/presets/urls/ssh-github.gitconfig

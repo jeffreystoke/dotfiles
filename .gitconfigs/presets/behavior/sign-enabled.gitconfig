@@ -1,7 +1,7 @@
 # sign commit and tags with gpg key
 
 [commit]
-	gpgSign = true
+    gpgSign = true
 
 [tag]
-	gpgSign = true
+    gpgSign = true

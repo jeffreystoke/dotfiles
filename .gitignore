@@ -12,8 +12,9 @@
 
 # project files
 
-!/.dotfiles
+!/.gitkeep
 
+!/.github
 !/scripts
 !/.ecrc
 !/.editorconfig

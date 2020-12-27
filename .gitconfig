@@ -1,36 +1,36 @@
 [user]
-	# do not guess user and email
-	useConfigOnly = true
+    # do not guess user and email
+    useConfigOnly = true
 
 [pull]
-	rebase = true
+    rebase = true
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process
 
 [core]
-	editor = vim
-	excludesfile = ~/.gitconfigs/global.gitignore
-	autocrlf = input
+    editor = vim
+    excludesfile = ~/.gitconfigs/global.gitignore
+    autocrlf = input
 
 [color]
-	ui = auto
+    ui = auto
 
 [protocol "git"]
-	allow = true
+    allow = true
 
 # add global presets
 [include]
-	# use delta for git diff
-	path = ~/.gitconfigs/presets/tools/delta.gitconfig
-	# sign all commits and tags, override this beavior by including
-	# ~/.gitconfigs/presets/behavior/sign-disabled.gitconfig
-	path = ~/.gitconfigs/presets/behavior/sign-enabled.gitconfig
+    # use delta for git diff
+    path = ~/.gitconfigs/presets/tools/delta.gitconfig
+    # sign all commits and tags, override this beavior by including
+    # ~/.gitconfigs/presets/behavior/sign-disabled.gitconfig
+    path = ~/.gitconfigs/presets/behavior/sign-enabled.gitconfig
 
 [include]
-	path = ~/.gitconfigs/workspaces/sample.gitconfig # kept for testing
-	path = ~/.gitconfigs/workspaces/personal.gitconfig
-	path = ~/.gitconfigs/workspaces/work.gitconfig
+    path = ~/.gitconfigs/workspaces/sample.gitconfig # kept for testing
+    path = ~/.gitconfigs/workspaces/personal.gitconfig
+    path = ~/.gitconfigs/workspaces/work.gitconfig

@@ -1,5 +1,5 @@
 [commit]
-	gpgSign = false
+    gpgSign = false
 
 [tag]
-	gpgSign = false
+    gpgSign = false
