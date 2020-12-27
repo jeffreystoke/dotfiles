@@ -11,14 +11,10 @@ lint.shell:
 			| grep -v pkg/mesh \
 			| xargs -I'{}' shellcheck -S warning -e SC1090 -e SC1091 {} ;"
 
-lint.go:
-	${RUN_LINTER} golangci/golangci-lint:v1.33.0 golangci-lint run --fix
-
 lint.yaml:
 	${RUN_LINTER} arhatdev/yamllint:latest yamllint -c .yaml-lint.yml .
 
 lint.all: \
 	lint.file \
 	lint.shell \
-	lint.go \
 	lint.yaml
