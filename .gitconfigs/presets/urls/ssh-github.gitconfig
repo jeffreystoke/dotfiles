@@ -1,0 +1,7 @@
+# use ssh instead of http for github urls
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[url "git@gist.github.com:"]
+	insteadOf = https://gist.github.com/
