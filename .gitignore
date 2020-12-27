@@ -15,6 +15,7 @@
 !/.gitkeep
 
 !/.github
+!/docs
 !/scripts
 !/.ecrc
 !/.editorconfig

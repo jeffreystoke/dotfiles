@@ -2,3 +2,6 @@
     name = Joe Doyle
     email = joe.doyle@example.com
     # signingkey = XXXXXXXXXXXXXXXX
+
+[core]
+    sshCommand = 'ssh -i ~/.ssh/joe.doyle'

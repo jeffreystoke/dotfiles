@@ -7,12 +7,12 @@
 # e.g. ~/repos/sample/my-repo-1 and ~/repos/sample/my-repo-2
 [includeIf "gitdir:~/repos/sample/"]
     # set user
-    path = ~/.gitconfigs/users/sample.gitconfig
+    path = ~/.gitconfigs/users/joe.doyle.gitconfig
     # disable default commit & tag signing
     path = ~/.gitconfigs/presets/behavior/sign-disabled.gitconfig
 
 [includeIf "gitdir:~/repos/foo/"]
     # set user
-    path = ~/.gitconfigs/users/sample.gitconfig
+    path = ~/.gitconfigs/users/joe.doyle.gitconfig
     # use ssh for github
     path = ~/.gitconfigs/presets/urls/ssh-github.gitconfig
