@@ -5,6 +5,7 @@
 
 /.gitconfig
 /.gitignore
+/.gitmodules
 /.config/git
 
 # kubectl

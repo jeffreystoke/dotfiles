@@ -21,7 +21,6 @@ defaults:
 
 jobs:
   stylecheck:
-    if: contains(github.head_ref, 'deps/') == false
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -30,25 +29,60 @@ jobs:
       run: |
         make lint.all
 
+  setup-check:
+    runs-on: ubuntu-latest
+    env:
+      DOTFILES_UPSTREAM: https://github.com/${{ github.repository }}.git
+    strategy:
+      fail-fast: false
+      matrix:
+        method:
+        - git-init
+        - git-clone
+    steps:
     - name: Install tree
       run: |
         sudo apt update
         sudo apt install -y tree
 
-    - name: Check sparse-checkout working
+    - uses: actions/checkout@v2
+      with:
+        path: dotfiles
+
+    - name: Get branch
+      id: get_branch
       run: |
-        tree -a -I 'oh-my-zsh|.git'
+        echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
 
-        cat .gitkeep | git sparse-checkout set --stdin
+    - name: Setup with ${{ matrix.method }}
+      env:
+        SETUP_METHOD: ${{ matrix.method }}
+        DOTFILES_UPSTREAM_BRANCH: ${{ steps.get_branch.outputs.branch }}
+      run: |
+        export DOTFILES_PATH="${GITHUB_WORKSPACE}/${{ matrix.method }}"
+        sh "${GITHUB_WORKSPACE}/dotfiles/scripts/setup.sh" setup-upstream
 
-        tree -a -I 'oh-my-zsh|.git'
+        cd "${DOTFILES_PATH}"
+        git status
+        tree -a "${DOTFILES_PATH}"
 
-        if [ -f "Makefile" ]; then
-          echo "Unexpected Makefile not removed"
-          exit 1
+    - name: Checkout dotfiles
+      run: |
+        set -x
+
+        export DOTFILES_PATH="${GITHUB_WORKSPACE}/${{ matrix.method }}"
+
+        if [ ! -f "${DOTFILES_PATH}/.gitkeep" ]; then
+          echo "Unexpected .gitkeep not found"
         fi
 
-        if [ ! -f ".gitconfig" ]; then
+        tree -a -I 'oh-my-zsh|.git' "${DOTFILES_PATH}"
+
+        sh "${GITHUB_WORKSPACE}/dotfiles/scripts/setup.sh" checkout-dotfiles
+
+        tree -a -I 'oh-my-zsh|.git' "${DOTFILES_PATH}"
+
+        if [ ! -f "${DOTFILES_PATH}/.gitconfig" ]; then
           echo "Unexpected .gitconfig not kept"
           exit 1
         fi
