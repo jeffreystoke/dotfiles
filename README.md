@@ -16,9 +16,9 @@ Manage `${HOME}` directory with `git` directly
 
 ## Purpose
 
-There are a lot of dotfile projects, but in my personal experience, most of them only provides example configurations of various kinds of tools, this project is trying to embrace these projects with some concise core files:
+There are a lot of `dotfiles` projects, but in my personal experience, most of them only provide configurations of various kinds of tools, this project is trying to embrace them with some concise core files for config syncing:
 
-- Organized customization using existing dotfile projects (without changing core files)
+- Organized customization using existing dotfiles projects (without changing core files)
 - Continuous update of core files with git
 
 ## Features
@@ -69,13 +69,13 @@ Configure tools following instructions in [feature docs](#features)
 
 1. Go to `${HOME}`
 1. Run `git stash` to save all overrides to `${HOME}`
-1. Update dotfiles by executing `git pull upstream master --rebase`
+1. Update core files by executing `git pull upstream master --rebase`
 1. Run `git stash pop` and resolve all conflicts
 1. Commit your changes and push to `origin`
 
 ### Uninstall
 
-1. Backup your dotfiles
+1. Backup your data in dotfiles
 1. Remove all files from this project by running `git sparse-checkout set ""`
 1. Remove `${HOME}/.git`
 
