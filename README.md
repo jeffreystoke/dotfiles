@@ -75,9 +75,10 @@ Configure tools following instructions in [feature docs](#features)
 
 ### Uninstall
 
-1. Backup your data in dotfiles
+1. Backup your data in dotfiles (show them with `git sparse-checkout list | xargs -I0 echo "${HOME}0"`)
 1. Remove all files from this project by running `git sparse-checkout set ""`
 1. Remove `${HOME}/.git`
+1. Restore your data to their origin directories
 
 ## Repo Maintenance
 
