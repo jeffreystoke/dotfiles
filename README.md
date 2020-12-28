@@ -2,15 +2,29 @@
 
 Manage home directory with `git` directly
 
+- [Purpose](#purpose)
+- [Features](#features)
 - [Usage](#usage)
   - [Prerequisites](#prerequisites)
   - [Initialize](#initialize)
   - [Update (for those kept this repo as `upstream`)](#update-for-those-kept-this-repo-as-upstream)
   - [Uninstall](#uninstall)
-  - [Guidelines](#guidelines)
 - [Repo Maintenance](#repo-maintenance)
   - [Adding files or directories](#adding-files-or-directories)
 - [LICENSE](#license)
+
+## Purpose
+
+There are a lot of dotfile projects, but in my personal experience, most of them only provides example configurations of various kinds of tools, this project is trying to embrace these projects with some concise core files:
+
+- Organized customization using existing dotfile projects (without changing core files)
+- Continuous update of core files with git
+
+## Features
+
+- [`git` config management for multiple workspaces](./docs/git.md)
+- [`zsh` config management with `oh-my-zsh`](./docs/zsh.md)
+- [`kubectl` config management with `kubie`](./docs/kubectl.md)
 
 ## Usage
 
@@ -59,10 +73,6 @@ __NOTE:__ DO NOT fork this repo for private syncing purpose
 1. Backup your dotfiles
 1. Remove all files from this project by running `git sparse-checkout set ""`
 1. Remove `${HOME}/.git`
-
-### Guidelines
-
-- [git](./docs/git.md) config management
 
 ## Repo Maintenance
 

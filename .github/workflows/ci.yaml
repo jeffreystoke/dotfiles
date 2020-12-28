@@ -32,11 +32,11 @@ jobs:
 
     - name: Check sparse-checkout working
       run: |
-        ls -alh
+        tree
 
         cat .gitkeep | git sparse-checkout set --stdin
 
-        ls -alh
+        tree
 
         if [ -f "Makefile" ]; then
           echo "Unexpected Makefile not removed"
