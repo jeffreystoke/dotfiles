@@ -44,7 +44,7 @@ __NOTE:__ DO NOT fork this repo for private syncing purpose
 #### Option 1: Keep this repo as `upstream`
 
 1. Clone this repo as your home directory
-    - `git clone --no-checkout https://github.com/jeffreystoke/dotfiles.git ${HOME}`
+    - `git clone --no-checkout --recursive https://github.com/jeffreystoke/dotfiles.git ${HOME}`
 1. Go to `${HOME}` and checkout files
     - Set sparse-checkout mode: `git sparse-checkout init`
     - (Optional) Update `.gitkeep` to keep expected directories and files only

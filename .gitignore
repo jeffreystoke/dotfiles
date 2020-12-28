@@ -23,6 +23,7 @@
 !/scripts
 !/.ecrc
 !/.editorconfig
+!/.gitmodules
 !/.pre-commit-config.yaml
 !/.renovaterc.json
 !/.yaml-lint.yml
