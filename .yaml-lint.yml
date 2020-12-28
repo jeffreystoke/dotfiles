@@ -2,7 +2,9 @@ yaml-files:
 - "*.yaml"
 - "*.yml"
 
-ignore: ""
+ignore: |
+  \.config/zsh/oh-my-zsh/.*
+
 rules:
   braces:
     level: warning

@@ -1,3 +1,5 @@
+# shellcheck disable=SC2148
+
 # DO NOT EDIT
 
 # Set oh-my-zsh installation path
