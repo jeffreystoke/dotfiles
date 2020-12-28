@@ -1,18 +1,22 @@
 /*
 
+!/.gitkeep
+!/.config
+
 # git
 
-!/.gitconfigs
 !/.gitconfig
 !/.gitignore
 
-# kubernetes
+# kubectl
 
 !/.kube
 
-# project files
+# zsh
 
-!/.gitkeep
+!/.zshrc
+
+# project files
 
 !/.github
 !/docs

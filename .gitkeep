@@ -1,11 +1,17 @@
-.gitkeep
+# the list itself
+/.gitkeep
 
 # git
 
-.gitconfigs
-.gitconfig
-.gitignore
+/.gitconfig
+/.gitignore
+/.config/git
 
-# kubernetes
+# kubectl
 
-.kube
+/.kube
+
+# zsh
+
+/.zshrc
+/.config/zsh
