@@ -26,8 +26,8 @@ git config management for multiple workspaces
 
 ## Usage
 
-- Create workspaces in `~/.config/git/workspaces`, see [.config/git/workspaces/sample.gitconfig](../.config/git/workspaces/sample.gitconfig) for example
-- Create `~/.config/git/workspaces.gitconfig` to include workspace definitions in `~/.config/git/workspaces/*.gitconfig`
+- Create workspaces in `~/.config/git/workspaces/*.gitconfig`, see [.config/git/workspaces/sample.gitconfig](../.config/git/workspaces/sample.gitconfig) for example
+- Create `~/.config/git/workspaces.gitconfig` to include workspace definitions `~/.config/git/workspaces/*.gitconfig` (saddly, no glob support)
 
   ```ini
   [include]
