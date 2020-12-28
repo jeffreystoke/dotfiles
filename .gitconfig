@@ -26,11 +26,13 @@
 
 # workspaces
 [include]
-    # user provided workspaces definitions
+    # create root gitconfig of all your workspaces
     path = ~/.config/git/workspaces.gitconfig
-    # # add global presets in your workspaces.gitconfig
-    # # use delta for git diff
-    # path = ~/.config/git/presets/tools/delta.gitconfig
-    # # sign all commits and tags, override this beavior by including
-    # # ~/.config/git/presets/behavior/sign-disabled.gitconfig
-    # path = ~/.config/git/presets/behavior/sign-enabled.gitconfig
+
+# # add global presets in your workspaces.gitconfig and override config options here
+# [include]
+#     # use delta for git diff
+#     path = ~/.config/git/presets/tools/delta.gitconfig
+#     # sign all commits and tags, override this beavior by including
+#     # ~/.config/git/presets/behavior/sign-disabled.gitconfig
+#     path = ~/.config/git/presets/behavior/sign-enabled.gitconfig
