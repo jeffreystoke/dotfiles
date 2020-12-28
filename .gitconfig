@@ -1,3 +1,5 @@
+# DO NOT EDIT
+
 [user]
     # do not guess user and email
     useConfigOnly = true
@@ -22,15 +24,13 @@
 [protocol "git"]
     allow = true
 
-# add global presets
-[include]
-    # use delta for git diff
-    path = ~/.config/git/presets/tools/delta.gitconfig
-    # sign all commits and tags, override this beavior by including
-    # ~/.config/git/presets/behavior/sign-disabled.gitconfig
-    path = ~/.config/git/presets/behavior/sign-enabled.gitconfig
-
 # workspaces
 [include]
     # user provided workspaces definitions
     path = ~/.config/git/workspaces.gitconfig
+    # # add global presets in your workspaces.gitconfig
+    # # use delta for git diff
+    # path = ~/.config/git/presets/tools/delta.gitconfig
+    # # sign all commits and tags, override this beavior by including
+    # # ~/.config/git/presets/behavior/sign-disabled.gitconfig
+    # path = ~/.config/git/presets/behavior/sign-enabled.gitconfig
