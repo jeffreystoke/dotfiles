@@ -30,6 +30,11 @@ jobs:
       run: |
         make lint.all
 
+    - name: Install tree
+      run: |
+        sudo apt update
+        sudo apt install -y tree
+
     - name: Check sparse-checkout working
       run: |
         tree
