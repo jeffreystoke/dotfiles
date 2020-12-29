@@ -33,9 +33,9 @@ setup_upstream() {
   "git-clone")
     git clone --no-checkout --branch "${DOTFILES_UPSTREAM_BRANCH}" \
       --origin upstream "${DOTFILES_UPSTREAM}" "${DOTFILES_PATH}"
-    git config remote.upstream.pushurl 'STOP PUSHING TO PUBLIC UPSTREAM'
 
     cd "${DOTFILES_PATH}"
+    git config remote.upstream.pushurl 'STOP PUSHING TO PUBLIC UPSTREAM'
     git sparse-checkout init
     git sparse-checkout set /.gitkeep
     git checkout
