@@ -16,3 +16,7 @@
 
 /.zshrc
 /.config/zsh
+
+# rime
+
+/.config/rime

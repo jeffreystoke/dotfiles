@@ -2,3 +2,7 @@
 	path = .config/zsh/oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
 	branch = master
+
+[submodule "rime-emoji"]
+	path = .config/rime/dicts/emoji
+	url = https://github.com/rime/rime-emoji.git

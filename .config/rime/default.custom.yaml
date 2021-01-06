@@ -1,0 +1,8 @@
+# Global custom config for rime
+
+# __patch:
+# - path/to/preset:/
+
+patch:
+  switcher/hotkeys:
+  - Alt+grave

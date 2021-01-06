@@ -1,0 +1,14 @@
+patch:
+  style/color_scheme: azure
+
+  preset_color_schemes:
+    azure:
+      author: 佛振 <chen.sst@gmail.com>
+      back_color: 0xee8b4e01
+      candidate_text_color: 0xffeacc
+      comment_text_color: 0xc69664
+      hilited_candidate_back_color: 0x00000000
+      hilited_candidate_text_color: 0x7ffeff
+      hilited_text_color: 0xffeacc
+      name: 青天／Azure
+      text_color: 0xcfa677

@@ -26,6 +26,7 @@ There are a lot of `dotfiles` projects, but in my personal experience, most of t
 - [`git` config management for multiple workspaces](./docs/git.md)
 - [`zsh` config management with `oh-my-zsh`](./docs/zsh.md)
 - [`kubectl` config management with `kubie`](./docs/kubectl.md)
+- [`rime` based input method config management](./docs/rime.md)
 
 ## Usage
 

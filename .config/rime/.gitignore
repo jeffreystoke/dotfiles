@@ -1,0 +1,12 @@
+/build
+
+# ignore user database
+/*.userdb
+
+/sync
+/trash
+
+/user.yaml
+/installation.yaml
+
+/*test*.yaml

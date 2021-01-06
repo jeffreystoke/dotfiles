@@ -1,0 +1,16 @@
+patch:
+  style/color_scheme: solarized-rock
+
+  preset_color_schemes:
+    solarized-rock:
+      author: Aben <tntaben@gmail.com>, based on Ethan Schoonover's Solarized color scheme
+      back_color: 0x362b00
+      border_color: 0x362b00
+      candidate_text_color: 0x969483
+      comment_text_color: 0xc098a12a
+      hilited_candidate_back_color: 0x8236d3
+      hilited_candidate_text_color: 0xffffff
+      hilited_comment_text_color: 0x362b00
+      hilited_text_color: 0x98a12a
+      name: 曬經石／Solarized Rock
+      text_color: 0x8236d3

@@ -1,0 +1,5 @@
+# Custom config for weasel
+
+__patch:
+# set color theme
+- themes/purity-of-essence:/

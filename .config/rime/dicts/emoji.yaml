@@ -1,0 +1,16 @@
+# enable emoji
+
+patch:
+  engine/filters/+:
+  - simplifier@emoji_suggestion
+
+  switches/+:
+  - name: emoji_suggestion
+    reset: 1
+    states:
+    - "Yes"
+    - "No"
+
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion

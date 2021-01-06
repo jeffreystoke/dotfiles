@@ -1,0 +1,15 @@
+# When you would like to disable ascii_composer, you probably need to include
+# application specific presets in your {squirrel,weasel}.custom.yaml
+
+# https://github.com/rime/squirrel/issues/221#issuecomment-401652387
+
+patch:
+  engine/processors:
+  # - ascii_composer
+  - recognizer
+  - key_binder
+  - speller
+  - punctuator
+  - selector
+  - navigator
+  - express_editor

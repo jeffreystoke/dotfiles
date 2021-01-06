@@ -1,0 +1,4 @@
+# Custom config for luna_pinyin simplified Chinese
+
+__patch:
+- dicts/emoji:/

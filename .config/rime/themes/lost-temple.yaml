@@ -1,0 +1,14 @@
+patch:
+  style/color_scheme: lost-temple
+
+  preset_color_schemes:
+    lost-temple:
+      author: 佛振 <chen.sst@gmail.com>, based on ir_black
+      back_color: 0xee303030
+      comment_text_color: 0xbb82e6ca
+      hilited_candidate_back_color: 0x82e6ca
+      hilited_candidate_text_color: 0x000000
+      hilited_comment_text_color: 0xbb203d34
+      hilited_text_color: 0x82e6ca
+      name: 孤寺／Lost Temple
+      text_color: 0xe8f3f6

@@ -1,0 +1,15 @@
+patch:
+  style/color_scheme: aqua
+
+  preset_color_schemes:
+    aqua:
+      author: 佛振 <chen.sst@gmail.com>
+      back_color: 0xeeeceeee
+      candidate_text_color: 0x000000
+      comment_text_color: 0x5a5a5a
+      hilited_candidate_back_color: 0xeefa3a0a
+      hilited_candidate_text_color: 0xffffff
+      hilited_comment_text_color: 0xfcac9d
+      hilited_text_color: 0x000000
+      name: 碧水／Aqua
+      text_color: 0x606060

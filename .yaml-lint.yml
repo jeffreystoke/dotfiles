@@ -3,7 +3,12 @@ yaml-files:
 - "*.yml"
 
 ignore: |
-  \.config/zsh/oh-my-zsh/.*
+  \.config/zsh/oh-my-zsh/
+  \.config/rime/build/
+  \.config/rime/dicts/emoji/
+  \.config/rime/installation.yaml
+  \.config/rime/user.yaml
+  test/
 
 rules:
   braces:
